@@ -12,17 +12,17 @@ class UtPod
       static const int SUCCESS = 0;
       static const int NO_MEMORY = -1;
       static const int NOT_FOUND = -2;
-      
+
       struct SongNode
       {
          Song s;
          SongNode *next;
       };
-      
+
       SongNode *songs;  //the head pointer
-      
+
       int podMemSize;  //the total amount of memory available on the UtPod
-   
+
    public:
       //Default constructor
       //set the memory size to MAX_MEMORY
@@ -136,7 +136,7 @@ class UtPod
 
 
       ~UtPod();
- 
+
 };
 
 
