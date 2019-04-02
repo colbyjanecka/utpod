@@ -43,9 +43,9 @@ public:
 
      precondition: s is a valid Song
 
-     input parms -
+     input parms - passed song to add to linked list
 
-     output parms -
+     output parms - returns 0 if successful, and -1 if cant add (memory)
     */
 
     int addSong(Song const &s);
@@ -58,9 +58,9 @@ public:
          o returns -2 if song not found
 
 
-       input parms -
+       input parms - Passed a song to remove from list.
 
-       output parms -
+       output parms - returns 0 if successful, and -2 if song not found.
     */
 
     int removeSong(Song const &s);
@@ -70,9 +70,9 @@ public:
      *  shuffles the songs into random order
         o will do nothing if there are less than two songs in the current list
 
-       input parms -
+       input parms - none
 
-       output parms -
+       output parms - none
     */
 
     void shuffle();
@@ -82,9 +82,9 @@ public:
      * prints the current list of songs in order from first to last to standard output
      * format - Title, Artist, size in MB (one song per line)
 
-       input parms -
+       input parms - none
 
-       output parms -
+       output parms - none
     */
 
     void showSongList();
@@ -94,9 +94,9 @@ public:
      *  sorts the songs in ascending order
         o will do nothing if there are less than two songs in the current list
 
-       input parms -
+       input parms - none
 
-       output parms -
+       output parms - none
     */
 
     void sortSongList();
@@ -105,9 +105,9 @@ public:
     /* FUNCTION - void clearMemory
      * clears all the songs from memory
 
-       input parms -
+       input parms - none
 
-       output parms -
+       output parms - none
     */
     void clearMemory();
 
@@ -115,9 +115,10 @@ public:
     /* FUNCTION - int getTotalMemory
      *  returns the total amount of memory in the UtPod
 
-       input parms -
+       input parms - none
 
-       output parms -
+       output parms - integer containing the amount of memory
+                        available in the UTPod
     */
 
     int getTotalMemory() {
@@ -125,6 +126,13 @@ public:
     }
 
 
+    /* FUNCTION - void swap
+     *  swaps the location of two songs within the linked list
+
+       input parms - two different SongNode pointers to swap
+
+       output parms - none
+    */
     void swap(SongNode *s1, SongNode *s2);
 
 
@@ -134,11 +142,18 @@ public:
 
        input parms -
 
-       output parms -
+       output parms - returns amount of MB remaining in UTPod.
     */
-
     int getRemainingMemory();
 
+
+    /* FUNCTION - int getNumSongs
+    *   returns the amount of songs in the linked showSongList
+
+        input parms - none
+
+        output parms - passes integer with song count.
+    */
     int getNumSongs();
 
     ~UtPod();

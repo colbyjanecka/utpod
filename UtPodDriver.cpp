@@ -58,5 +58,15 @@ int main(int argc, char *argv[])
    t.shuffle();
    t.showSongList();
 
+   cout << endl << "--------------------------------" << endl;
+
+   t.shuffle();
+   t.showSongList();
+   
+   cout << endl << "--------------------------------" << endl;
+
+   t.shuffle();
+   t.showSongList();
+
 
 }

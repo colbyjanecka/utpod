@@ -145,30 +145,36 @@ int UtPod::getNumSongs(){
 }
 
 void UtPod::shuffle(){
+
     int numSongs = getNumSongs();
-    if(numSongs < 2){
+
+    if(numSongs < 2){                      //if there is only one song, exit
         return;
     }
-    else
-    {
-        srand(time(NULL));
 
-        SongNode* tempPtr1;
+    else {
+
+        srand(time(NULL)+getpid());     //seed random number generator and add
+                                        //processid for fast shuffling.
+
+        SongNode* tempPtr1;             //init pointers used to swap songs
         SongNode* tempPtr2;
 
-        for(int s; s<(2*numSongs); s++){
+        for(int s; s<(2*numSongs); s++){ //swap (2*numSongs) amount of random songs
 
             tempPtr1 = songs;
             tempPtr2 = songs;
+
 
             for(int i = (rand() % numSongs); i > 0; i--){
                 tempPtr1=tempPtr1->next;
             }
             for(int i = (rand() % numSongs); i > 0; i--){
                 tempPtr2=tempPtr2->next;
-            }
+            }                           //iterate through linked list a random
+                                            // amount of times for both pointers
 
-            swap(tempPtr1, tempPtr2);
+            swap(tempPtr1, tempPtr2);   // and swap the songs at these locations
         }
     }
 }
