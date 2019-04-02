@@ -10,42 +10,49 @@ using namespace std;
 
 class Song {
 
-    private:
-        string title;
-        string artist;
-        int size;
+private:
+    string title;
+    string artist;
+    int size;
 
-    public:
-        Song();
-        Song(string title, string artist, int size);
+public:
+    Song();
+    Song(string artistIn, string titleIn, int sizeIn);
 
-        void printSong();
+    void printSong();
 
-        void setTitle(string titleIn){
-            title = titleIn;
-        }
+    void setTitle(string titleIn) {
+        title = titleIn;
+    }
 
-        void setArtist(string artistIn){
-            artist = artistIn;
-        }
+    void setArtist(string artistIn){
+        artist = artistIn;
+    }
 
-        void setSize(int sizeIn){
-            size = sizeIn;
-        }
+    void setSize(int sizeIn){
+        size = sizeIn;
+    }
 
-        void getTitle(){
-            return title;
-        }
+    string getTitle() const {
+        return title;
+    }
 
-        void getArtist(){
-            return artist;
-        }
+    string getArtist() const {
+        return artist;
+    }
 
-        void getSize(){
-            return size;
-        }
+    int getSize() const {
+        return size;
+    }
+    void swap(Song &s2);
 
-        //~Song();
+
+    bool operator !=(Song const &rhs);
+    bool operator ==(Song const &rhs);
+    bool operator >(Song const &rhs);
+    bool operator <(Song const &rhs);
+    bool operator =(Song const &rhs);
+    //~Song();
 };
 
 #endif
