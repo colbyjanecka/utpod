@@ -107,15 +107,26 @@ void UtPod::sortSongList() {
     for(SongNode *p =songs ;p!=NULL;p=p->next){
         for(SongNode *w = p->next ;w!=NULL;w=w->next){
             if(w->s < p->s){
-                p->s.swap(w->s);
+                swap(w,p);
             }
         }
     }
 }
 
 void UtPod::swap(SongNode *s1, SongNode *s2) {
-    SongNode *temp = songs;
-    while 
+    Song temp;
+    temp.setTitle(s1->s.getTitle()  );
+    temp.setArtist(s1->s.getArtist()  );
+    temp.setSize(s1->s.getSize()  );
+
+    s1->s.setTitle(s2->s.getTitle());
+    s1->s.setArtist(s2->s.getArtist());
+    s1->s.setSize(s2->s.getSize());
+
+    s2->s.setTitle(temp.getTitle());
+    s2->s.setArtist(temp.getArtist());
+    s2->s.setSize(temp.getSize());
+
 }
 
 

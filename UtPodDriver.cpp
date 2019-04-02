@@ -37,21 +37,19 @@ int main(int argc, char *argv[])
     result = t.addSong(s3);
     cout << "result = " << result << endl;
 
-    Song s4("Beatles", "Hey Jude4", 7);
+    Song s4("Deatles", "Hey Jude1", 7);
     result = t.addSong(s4);
     cout << "result = " << result << endl;
 
-    Song s5("Beatles", "Hey Jude5", 241);
+    Song s5("Beatles", "Hey Jude1", 241);
 
-    s5.setTitle("title");
     result = t.addSong(s5);
     cout << "add result = " << result << endl;
     s1.setTitle("title");
     t.showSongList();
     printf("\n\n");
 
-   s1.swap(s2);
-
+   t.sortSongList();
    t.showSongList();
 
 

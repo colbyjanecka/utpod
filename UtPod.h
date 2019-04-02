@@ -21,6 +21,8 @@ private:
 
     SongNode *songs;  //the head pointer
 
+
+
     int podMemSize;  //the total amount of memory available on the UtPod
 
 public:
@@ -123,8 +125,8 @@ public:
     }
 
 
+    void swap(SongNode *s1, SongNode *s2);
 
-    void swap(Song &s1, Song &s2);
 
 
     /* FUNCTION - int getRemainingMemory
