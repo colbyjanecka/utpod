@@ -139,6 +139,7 @@ public:
 
     int getRemainingMemory();
 
+    int getNumSongs();
 
     ~UtPod();
 

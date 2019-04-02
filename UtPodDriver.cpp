@@ -47,9 +47,15 @@ int main(int argc, char *argv[])
     cout << "add result = " << result << endl;
     s1.setTitle("title");
     t.showSongList();
-    printf("\n\n");
+
+    cout << endl << " NumSongs: " << t.getNumSongs() << endl;
 
    t.sortSongList();
+   t.showSongList();
+
+   cout << endl << "--------------------------------" << endl;
+
+   t.shuffle();
    t.showSongList();
 
 

@@ -129,8 +129,46 @@ void UtPod::swap(SongNode *s1, SongNode *s2) {
 
 }
 
+int UtPod::getNumSongs(){
+    int num = 0;
+    if(songs == NULL){
+        return(0);
+    }
+    else{
+        SongNode* songPtr = songs;
+        while(songPtr != NULL){
+            num++;
+            songPtr = songPtr->next;
+        }
+        return(num);
+    }
+}
 
+void UtPod::shuffle(){
+    int numSongs = getNumSongs();
+    if(numSongs < 2){
+        return;
+    }
+    else
+    {
+        srand(time(NULL));
 
+        SongNode* tempPtr1;
+        SongNode* tempPtr2;
 
+        for(int s; s<(2*numSongs); s++){
 
+            tempPtr1 = songs;
+            tempPtr2 = songs;
 
+            for(int i = (rand() % numSongs); i > 0; i--){
+                tempPtr1=tempPtr1->next;
+            }
+            for(int i = (rand() % numSongs); i > 0; i--){
+                tempPtr2=tempPtr2->next;
+            }
+
+            swap(tempPtr1, tempPtr2);
+        }
+    }
+}
