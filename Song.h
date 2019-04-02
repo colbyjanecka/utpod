@@ -21,6 +21,30 @@ class Song {
 
         void printSong();
 
+        void setTitle(string titleIn){
+            title = titleIn;
+        }
+
+        void setArtist(string artistIn){
+            artist = artistIn;
+        }
+
+        void setSize(int sizeIn){
+            size = sizeIn;
+        }
+
+        void getTitle(){
+            return title;
+        }
+
+        void getArtist(){
+            return artist;
+        }
+
+        void getSize(){
+            return size;
+        }
+
         //~Song();
 };
 
