@@ -168,11 +168,12 @@ void UtPod::shuffle(){
 
             for(int i = (rand() % numSongs); i > 0; i--){
                 tempPtr1=tempPtr1->next;
-            }
-            for(int i = (rand() % numSongs); i > 0; i--){
-                tempPtr2=tempPtr2->next;
             }                           //iterate through linked list a random
                                             // amount of times for both pointers
+            for(int i = (rand() % numSongs); i > 0; i--){
+                tempPtr2=tempPtr2->next;
+            }
+
 
             swap(tempPtr1, tempPtr2);   // and swap the songs at these locations
         }
