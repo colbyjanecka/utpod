@@ -113,6 +113,14 @@ void UtPod::sortSongList() {
     }
 }
 
+void UtPod::clearMemory() {
+    SongNode *nodePtr = songs;
+    int numSongs = getNumSongs();
+    for( int i = 0; i < numSongs; i++){
+        removeSong(songs->s);
+    }
+}
+
 void UtPod::swap(SongNode *s1, SongNode *s2) {
     Song temp;
     temp.setTitle(s1->s.getTitle()  );

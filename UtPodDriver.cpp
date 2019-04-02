@@ -60,9 +60,9 @@ int main(int argc, char *argv[])
 
    cout << endl << "--------------------------------" << endl;
 
-   t.shuffle();
+   t.clearMemory();
    t.showSongList();
-   
+
    cout << endl << "--------------------------------" << endl;
 
    t.shuffle();
